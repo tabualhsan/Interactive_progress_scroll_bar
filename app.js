@@ -10,6 +10,10 @@ const animateProgressBar = () => {
     let value = Math.floor(progressWidth);
     progressBar.style.width = value + "%";
     
+    if(value < 0 ){
+        progressBar.style.width = "0%"
+
+    }
 };
 
 window.addEventListener("scroll", animateProgressBar);
